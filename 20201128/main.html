@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/calendar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+
+    <title> 여행 친구들 모여라! </title>
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="tab" id="menu" />
+        <div class="container">
+            <input type="radio" name="tab" checked="checked" id="home" />
+            <section class="home">
+                <h1>여행 좋아하세요?</h1>
+                <label for="home"></label>
+                <div class="contents">
+                    <div class="js-quote quote">
+                        <br>
+                        <span class="quote__header">오늘도 많이 힘들었죠??</span>
+                        <br>
+                        <span class="quote__header">지치고 우울한 날,</span>
+                        <br>
+                        <span class="quote__header">가벼운 짐과 마음과 몸으로</span>
+                        <br>
+                        <span class="quote__header">걱정없이 떠나봐요!</span>
+
+                    </div>
+                    <span class="js-clock clock">
+                        00:00
+                    </span>
+                </div>
+            </section>
+            <input type="radio" name="tab" id="ToDo" />
+            <section class="ToDo">
+                <h1>여행 준비물!</h1>
+                <label for="ToDo"></label>
+                <div class="contents">
+                    <div class="js-toDo toDo">
+                        <div class="toDo__head">
+                            <span class="toDo__date"></span>
+                            <span>
+                                <ion-icon class="clear-btn" name="backspace"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="toDo__body">
+                            <ul class="toDo__list">
+
+                            </ul>
+                        </div>
+                        <div class="toDo__add">
+                            <ion-icon class="toDo__add-icon" name="add-circle"></ion-icon>
+                            <form class="toDo__form">
+                                <input type="text" style="display: none;">
+                                <input class="toDo__input" type="text" placeholder="Add To Do">
+                            </form>
+                        </div>
+                    </div>
+                    <span class="js-clock clock">
+                        00:00
+                    </span>
+                </div>
+            </section>
+            <input type="radio" name="tab" id="weather" />
+            <section class="weather">
+                <h1>지금 날씨 어때?</h1>
+                <label for="weather"></label>
+                <div class="contents">
+                    <div class="js-weather weather-container">
+                        <div class="weather__box1">
+                            <img class="weather__icon">
+                            <div class="weather__description"></div>
+                        </div>
+                        <div class="weather__box2">
+                            <div class="weather__temperature"></div>
+                            <div class="weather__location"></div>
+                        </div>
+                        <div class="weather__box3">
+                            <div class="weather__humidity"></div>
+                            <div class="weather__humidityText">습도</div>
+                        </div>
+                    </div>
+                    <span class="js-clock clock">
+                        00:00
+                    </span>
+                </div>
+            </section>
+            <input type="radio" name="tab" id="my-calendar" />
+            <section class="my-calendar">
+                <h1>이날 어때요?</h1>
+                <br>
+                <br>
+                <label for="my-calendar"></label>
+                    <h1>
+                        <br>
+                    </h1>
+                    <div>
+                        <div class="my-calendar clearfix">
+                            <div class="clicked-date">
+                                <div class="cal-day"></div>
+                                <div class="cal-date"></div>
+                            </div>
+                            <div class="calendar-box">
+                              <div class="ctr-box clearfix">
+                                <button type="button" title="prev" class="btn-cal prev">
+                                </button>
+                                <span class="cal-month"></span>
+                                <span class="cal-year"></span>
+                                <button type="button" title="next" class="btn-cal next">
+                                </button>
+                              </div>
+                              <table class="cal-table">
+                                <thead>
+                                  <tr>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>T</th>
+                                    <th>W</th>
+                                    <th>T</th>
+                                    <th>F</th>
+                                    <th>S</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="cal-body"></tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+        </div>
+        <div class="menu">
+            <div>
+                <label for="menu"></label>
+                <label for="home"></label>
+            </div>
+        </div>
+    </form>
+    <script src="js/calendar.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="js/todo.js"></script>
+
+
+
+</body>
+
+</html>

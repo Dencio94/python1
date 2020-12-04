@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+    <title>회원 로그인</title>
+    <style type="text/css">
+    body {
+
+       font-family: '나눔고딕',NanumGothic,'돋움',Dotum,helvetica,sans-serif;
+       font-size: 30px;
+       color : blue;
+   }
+    #container {
+      position: absolute;
+      width: 500px;
+      height: 900px;
+      background-color: white;
+      text-align: center;
+      margin-left: -200px;
+      margin-top: -200px;
+      left: 50%;
+      top: 50%;
+      font-size: 20px;
+
+    }
+   #content {
+       background-color: white;
+       width: 100px auto;
+       text-align: center;
+       margin-top: 0px auto;
+       margin-bottom: 0px auto;
+       left: 50%;
+       top: 50%;
+       color : black;
+   }
+
+
+    </style>
+    <script type="text/javascript">
+        function CheckRegister() {
+           if (document.getElementById("UserId").value == "") {
+                alert("아이디를 입력해주세요.");
+                document.getElementById("UserId").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value == "") {
+                alert("비밀번호를 입력해주세요.");
+                document.getElementById("UserPassword").focus();
+                return false;
+            }
+           if (document.getElementById("UserId").value != "test") {
+
+                document.getElementById("UserId").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value != "1234") {
+
+                document.getElementById("UserPassword").focus();
+                return false;
+            }
+
+            alert("로그인이 완료되었습니다.");
+        }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+      <h2>오늘의 관광지 찾기</h2>
+       <div id="content">
+            <form name="RegForm" id="RegForm">
+                <table align="center" border="0" cellpadding="4" cellspacing="5">
+                    <tr>
+                        <td>날짜 :</td>
+                        <td align="left" >
+                            <input type="date">
+                        <td>위치 :</td>
+                        <td align="left" >
+                            <select id="tel0" name="tel0" >
+                                <option value="" ></option>
+                                <option value="서울">서울</option>
+                                <option value="경기">경기</option>
+                                <option value="강원">강원</option>
+                            </select>
+                        </td>
+                    </tr>
+                <tr>
+                        <td>최고기온 :</td>
+                        <td><input type="text" id="UserId" name="UserId" size="20" maxlength="20" /></td>
+                </tr>
+                    <tr>
+                        <td>최저기온 :</td>
+                        <td><input type="text" id="UserId" name="UserId" size="20" maxlength="20" /></td>
+                </tr>
+                    <tr>
+                        <td>평균 기온 :</td>
+                        <td><input type="text" id="UserId" name="UserId" size="20" maxlength="20" /></td>
+                </tr>
+                    <tr>
+                        <td>강수량 :</td>
+                        <td><input type="text" id="UserId" name="UserId" size="20" maxlength="20" /></td>
+                </tr>
+
+                    </tr>
+
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                <table border="1" bordercolor="blue" width ="500" height="300" align = "center">
+                    <tr>
+                        <td>공백</td>
+                        <td>관광지명</td>
+                        <td>주차장 여부</td>
+                        <td>주소</td>
+                        <td>전화번호</td>
+                    </tr>
+                     <tr>
+                         <td>111111111</td>
+                        <td> </td>
+                        <td></td>
+                        <td></td>
+                         <td></td>
+                    </tr>
+                     <tr>
+                         <td>222222222</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                         <td></td>
+                    </tr>
+                    <tr>
+                        <td>3333333</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                     <tr>
+                         <td>4444444</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                         <td></td>
+                    </tr>
+                    <tr>
+                         <td>555555</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+         </div>
+    </div>
+</body>
+</html>

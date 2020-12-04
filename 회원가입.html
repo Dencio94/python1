@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+    <title>회원 가입</title>
+    <style type="text/css">
+    body {
+
+       font-family: '나눔고딕',NanumGothic,'돋움',Dotum,helvetica,sans-serif;
+       font-size: 30px;
+       color : blue;
+   }
+    #container {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background-color: white;
+      text-align: center;
+      margin-left: -200px;
+      margin-top: -200px;
+      left: 50%;
+      top: 50%;
+      font-size: 20px;
+
+    }
+   #content {
+       background-color: white;
+       width: 100px auto;
+       text-align: center;
+       margin-top: 0px auto;
+       margin-bottom: 0px auto;
+       left: 50%;
+       top: 50%;
+       color : black;
+   }
+   #footer {
+       background-color: white;
+       color: white;
+       padding: 15px;
+
+   }
+    </style>
+    <script type="text/javascript">
+        function CheckRegister() {
+           if (document.getElementById("name").value == "") {
+                alert("이름을 입력해주세요.");
+                document.getElementById("name").focus();
+                return false;
+            }
+           if (document.getElementById("UserId").value == "") {
+                alert("아이디를 입력해주세요.");
+                document.getElementById("UserId").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value == "") {
+                alert("비밀번호를 입력해주세요.");
+                document.getElementById("UserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("ReUserPassword").value == "") {
+                alert("비밀번호 확인을 입력해주세요.");
+                document.getElementById("ReUserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value != document.getElementById("ReUserPassword").value) {
+                alert("비밀번호와 비밀번호 확인 값이 일치하지 않습니다.");
+                document.getElementById("ReUserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("email").value == "") {
+                alert("이메일을 입력해주세요.");
+                document.getElementById("email").focus();
+                return false;
+            }
+            var rdo_obj = document.getElementsByName("gender");
+            var rdo_leng = rdo_obj.length;
+            var rdo_checked = 0;
+            for (i = 0; i < rdo_leng; i++) {
+                if (rdo_obj[i].checked == true) {
+                    rdo_checked += 1;
+                }
+            }
+            if (rdo_checked == 0) {
+                alert("성별을 선택해주세요.");
+                return;
+            }
+            if (document.getElementById("tel3").value == "") {
+                alert("전화번호를 입력해주세요.");
+                document.getElementById("tel3").focus();
+                return false;
+            }
+            if (document.getElementById("tel4").value == "") {
+                alert("전화번호를 입력해주세요.");
+                document.getElementById("tel4").focus();
+                return false;
+            }
+            if (document.getElementById("tel5").value == "") {
+                alert("전화번호를 입력해주세요.");
+                document.getElementById("tel5").focus();
+                return false;
+            }
+            if (document.getElementById("tel0").selectedIndex == 0) {
+                alert("핸드폰 번호를 선택해주세요.");
+                document.getElementById("tel0").focus();
+                return false;
+            }
+            if (document.getElementById("tel1").value == "") {
+                alert("핸드폰 번호를 입력해주세요.");
+                document.getElementById("tel1").focus();
+                return false;
+            }
+            if (document.getElementById("tel2").value == "") {
+                alert("핸드폰 번호를 입력해주세요.");
+                document.getElementById("tel2").focus();
+                return false;
+            }
+            if (document.getElementById("homepage").value == "") {
+                alert("홈페이지를 입력해주세요.");
+                document.getElementById("homepage").focus();
+                return false;
+            }
+
+            var chk_obj = document.getElementsByName("interest");
+            var chk_leng = chk_obj.length;
+            var checked = 0;
+            for (i = 0; i < chk_leng; i++) {
+                if (chk_obj[i].checked == true) {
+                    checked += 1;
+                }
+            }
+            if (checked == 0) {
+                alert("관심분야를 선택해주세요.");
+                return;
+            }
+            if (document.getElementById("freetalk").value == "") {
+                alert("하고 싶은 말을 남겨주세요.");
+                document.getElementById("freetalk").focus();
+                return false;
+            }
+
+            alert("회원가입이 완료되었습니다.");
+        }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+      <h2 align="center">회원 가입</h2>
+       <div id="content">
+            <form name="RegForm" id="RegForm">
+                <table  align="center" border="0" cellpadding="4" cellspacing="5">
+
+                    <tr>
+                        <td>ID :</td>
+                        <td><input type="text" id="UserId" name="UserId" size="20" maxlength="20" /></td>
+                    </tr>
+                    <tr>
+                        <td>PW :</td>
+                        <td><input type="password" id="UserPassword" name="UserPassword" size="20" maxlength="20" /></td>
+                    </tr>
+                    <tr>
+                        <td>PW확인 :</td>
+                        <td><input type="password" id="ReUserPassword" name="ReUserPassword" size="20" maxlength="20" /></td>
+                    </tr>
+                    <tr>
+                        <td>거주지 :</td>
+                        <td align="left" >
+                            <select id="tel0" name="tel0" >
+                                <option value="" ></option>
+                                <option value="서울">서울</option>
+                                <option value="경기">경기</option>
+                                <option value="강원">강원</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td  align="right"colspan="4"><input type="button" id="Login" name="Login" value="등록" onclick="CheckRegister();" />
+                            <input type="button" id="Login" name="Login" value="취소" onclick="CheckRegister();" /></td>
+
+                    </tr>
+                </table>
+            </form>
+      </div>
+    </div>
+</body>
+</html>
